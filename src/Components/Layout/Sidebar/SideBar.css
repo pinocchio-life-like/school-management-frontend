@@ -1,0 +1,9 @@
+.my-sider {
+    overflow-y: scroll !important;
+    /* make the Sider content scrollable */
+}
+
+.my-sider::-webkit-scrollbar {
+    width: 0 !important;
+    /* hide the scrollbar */
+}

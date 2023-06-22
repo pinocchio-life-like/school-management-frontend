@@ -1,0 +1,35 @@
+.StudentsListConatiner {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 0.1fr 0.1fr 2.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "StudentListTitle StudentListTitle StudentListSearch"
+        "ReloadAndSelectCount ReloadAndSelectCount ActionsTab"
+        "StudentListTableContainer StudentListTableContainer StudentListTableContainer";
+}
+
+.StudentListTitle {
+    /* background-color: rgba(69, 147, 255, 0.3); */
+    /* border-top-left-radius: 9px; */
+    grid-area: StudentListTitle;
+}
+
+.StudentListSearch {
+    /* background-color: rgba(69, 147, 255, 0.3); */
+    border-top-right-radius: 9px;
+    grid-area: StudentListSearch;
+}
+
+.ActionsTab {
+    grid-area: ActionsTab;
+}
+
+.ReloadAndSelectCount {
+    grid-area: ReloadAndSelectCount;
+}
+
+.StudentListTableContainer {
+    grid-area: StudentListTableContainer;
+}

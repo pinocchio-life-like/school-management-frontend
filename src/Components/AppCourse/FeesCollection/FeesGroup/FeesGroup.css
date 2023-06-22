@@ -1,0 +1,44 @@
+.FeesGroupCSS {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.3fr 2.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "FeesGroupTitle FeesGroupTitle FeesGroupTitle"
+        "FeesGroupForm FeesGroupForm FeesGroupForm"
+        "FeesGroupList FeesGroupList FeesGroupList";
+}
+
+.FeesGroupTitle {
+    grid-area: FeesGroupTitle;
+}
+
+.FeesGroupForm {
+    grid-area: FeesGroupForm;
+}
+
+.FeesGroupList {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 0.1fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "FeesGroupListTitle FeesGroupListTitle FeesGroupSearch"
+        "FeesGroupTable FeesGroupTable FeesGroupTable"
+        "FeesGroupTable FeesGroupTable FeesGroupTable";
+    grid-area: FeesGroupList;
+}
+
+.FeesGroupListTitle {
+    grid-area: FeesGroupListTitle;
+}
+
+.FeesGroupSearch {
+    grid-area: FeesGroupSearch;
+}
+
+.FeesGroupTable {
+    grid-area: FeesGroupTable;
+}

@@ -1,0 +1,75 @@
+.ApplicationsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "ApplicationsBoard ApplicationsBoard ApplicationsBoard"
+        "ApplicationsList ApplicationsList ApplicationsList"
+        "ApplicationsList ApplicationsList ApplicationsList";
+}
+
+.ApplicationsBoard {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.037, 1.25);
+    height: 25vh;
+    color: aliceblue;
+    background-size: 100% 110%;
+    background-image: url('/public/Images/Image_Tech_Job_Software_Developer_LandingPage.jpg');
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+    grid-area: ApplicationsBoard;
+    margin-bottom: 30px;
+}
+
+.ApplicationsTitle {
+    animation: upDown 5000ms infinite linear;
+}
+
+@keyframes upDown {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ApplicationsListing {}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #206680;
+    /* border-radius: 10px 10px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2383a2;
+}
+
+.ApplicationsList {
+    grid-area: ApplicationsList;
+    text-align: left;
+}

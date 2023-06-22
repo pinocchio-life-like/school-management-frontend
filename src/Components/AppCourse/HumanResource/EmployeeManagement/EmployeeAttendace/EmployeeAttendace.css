@@ -1,0 +1,14 @@
+.EmployeeAttendaceClass {
+    display: flex;
+    flex-direction: column;
+}
+
+.EmployeeAttendanceHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DateAndSubmitAttendance {
+    display: flex;
+    justify-content: flex-end;
+}

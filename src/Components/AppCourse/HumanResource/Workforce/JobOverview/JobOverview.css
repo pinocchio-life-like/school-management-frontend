@@ -1,0 +1,100 @@
+.JovOverViewContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.JobOverviewHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DateAndExportJob {
+    /* width: 28%; */
+    justify-content: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.JobExportButton {
+    background-color: rgb(69, 147, 255);
+    color: white;
+}
+
+.JobStatisticsCardContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between
+}
+
+.TopLeftJobDiv {
+    color: #5DADE2;
+    width: 50%;
+    text-align: left;
+    padding: 24px;
+    background-color: #fff;
+    border-right: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.TopRightJobDiv {
+    color: #FFA500;
+    width: 50%;
+    text-align: left;
+    padding: 24px;
+    background-color: #fff;
+    border-left: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.BottomLeftJobDiv {
+    color: #FF6B6B;
+    width: 50%;
+    text-align: left;
+    padding: 24px;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.BottomRightJobDiv {
+    color: #82E0AA;
+    width: 50%;
+    text-align: left;
+    padding: 24px;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* .JobCardHover:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+} */
+
+.JobChartDiv .ant-card .ant-card-body {
+    padding: 0;
+}
+
+.JobTableAndChart {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between
+}

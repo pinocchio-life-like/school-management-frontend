@@ -1,0 +1,4 @@
+.EmployeeListContainer {
+    display: flex;
+    flex-direction: column;
+}

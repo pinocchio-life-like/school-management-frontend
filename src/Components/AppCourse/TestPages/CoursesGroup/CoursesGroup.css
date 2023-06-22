@@ -1,0 +1,46 @@
+.CourseGroupCSS {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "CourseGroupTitle CourseGroupTitle CourseGroupSearchBar"
+        "CourseGroupTable CourseGroupTable CourseGroupTable"
+        "CourseGroupTable CourseGroupTable CourseGroupTable";
+}
+
+.CourseGroupTitle {
+    background-color: rgba(69, 147, 255, 0.3);
+    grid-area: CourseGroupTitle;
+}
+
+.CourseGroupSearchBar {
+
+    background-color: rgba(69, 147, 255, 0.3);
+    grid-area: CourseGroupSearchBar;
+}
+
+.CourseGroupTable {
+    grid-area: CourseGroupTable;
+}
+
+.CourseGroupCSSOnEdit {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1.5fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "CourseGroupTitle CourseGroupTitle CourseGroupSearchBar"
+        "EditCourseGroup CourseGroupTableOnEdit CourseGroupTableOnEdit"
+        "EditCourseGroup CourseGroupTableOnEdit CourseGroupTableOnEdit";
+}
+
+.EditCourseGroup {
+    grid-area: EditCourseGroup;
+}
+
+.CourseGroupTableOnEdit {
+    grid-area: CourseGroupTableOnEdit;
+}

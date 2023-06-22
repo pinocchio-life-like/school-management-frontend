@@ -1,0 +1,77 @@
+.LandingHeader {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(40, 21, 136, 0.8);
+    /* Set the background color to rgba(26, 95, 122, 0.8) */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    /* Add transition for smooth effect */
+    color: white;
+    backdrop-filter: blur(4px);
+    /* Adjust the blur radius (4px) to your preference */
+}
+
+.LandingHeaderLogo {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: 60px;
+    padding: 4px 0px;
+    cursor: pointer;
+}
+
+.LandingHeaderMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    /* background-color: rgba(124, 166, 153, 0.5); */
+    /* Adjust the alpha value (0.8) for transparency */
+    padding: 5px 18px;
+    color: white;
+    font-weight: 400;
+    width: 30%;
+    margin-left: 30%;
+}
+
+.LandingMenuItems {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.LandingMenuItems:hover {
+    border-radius: 4px;
+    background-color: rgba(124, 166, 153, 0.5);
+}
+
+.ItemSelectedClass {
+    border-bottom: 2px solid white;
+}
+
+.LandingHeaderLogin {
+    background-color: rgba(124, 166, 153, 0.5);
+    /* Adjust the alpha value (0.8) for transparency */
+    padding: 6px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.LandingHeaderLogin:hover {
+    color: white;
+    background-color: rgba(37, 124, 124, 0.5);
+}
+
+
+.transparent {
+    background-color: transparent !important;
+    /* Make the background transparent */
+}

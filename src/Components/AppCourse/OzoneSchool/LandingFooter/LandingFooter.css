@@ -1,0 +1,10 @@
+.LandingFooter {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin-top: -2px;
+    background-color: #010e28;
+    padding-bottom: 10px;
+}

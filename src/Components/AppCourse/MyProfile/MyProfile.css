@@ -1,0 +1,39 @@
+.ProfileImageAndOverview {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px
+}
+
+.ProfilePageOverview {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.ProfileOverviewHolder {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.PersonalDetailsAndEdit {
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.PasswordAndReset {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}

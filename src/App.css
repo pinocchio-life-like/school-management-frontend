@@ -1,0 +1,23 @@
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* .light-theme {
+  --background-color: var(--light-background-color);
+  --text-color: var(--light-text-color);
+}
+
+.dark-theme {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+} */

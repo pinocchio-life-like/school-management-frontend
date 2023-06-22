@@ -1,0 +1,36 @@
+.CourseOfferCSS {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.3fr;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+}
+
+.CourseOfferPage {
+    grid-area: 1 / 1 / 4 / 4;
+}
+
+.CourseOfferForm {
+
+    grid-area: 2 / 1 / 4 / 2;
+}
+
+.CourseOfferTable {
+
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.OfferCourseTitle {
+
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.GradeSearchBar {
+
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.OfferTableName {
+
+    grid-area: 1 / 2 / 2 / 3;
+}

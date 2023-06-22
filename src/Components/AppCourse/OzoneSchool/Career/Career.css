@@ -1,0 +1,19 @@
+.LandingPageCareerClass {
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.CareerIntroTextHolder {
+    color: rgb(255, 255, 255);
+    font-size: 56px;
+}
+
+.CareerPageJobList {
+    text-align: left;
+    background-color: aliceblue;
+    border-radius: 5px;
+}

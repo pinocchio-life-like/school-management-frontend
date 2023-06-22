@@ -1,0 +1,98 @@
+.StudentAddmissionContainer {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr 1fr;
+    grid-template-rows: 0.1fr 1.328fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "StudentAddmissionTitle StudentAddmissionTitle StudentAddmissionTitle"
+        "PhotoAndSibling StudentAddForm StudentAddForm"
+        "PhotoAndSibling ParentDetail ParentDetail";
+}
+
+
+.PhotoAndSibling {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 0.1fr 1.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "AddPhoto AddPhoto AddPhoto"
+        "SiblingInfo SiblingInfo SiblingInfo"
+        "SiblingInfo SiblingInfo SiblingInfo";
+    grid-area: PhotoAndSibling;
+}
+
+.SiblingInfo {
+    background-color: rgba(00, 15, 29, 0.1);
+    margin-bottom: 25px;
+    margin-right: 28px;
+    border-radius: 9px;
+    grid-area: SiblingInfo;
+}
+
+.StudentAddmissionTitle {
+    background-color: rgba(69, 147, 255, 0.3);
+    /* border-top-left-radius: 9px;
+    border-top-right-radius: 9px; */
+    grid-area: StudentAddmissionTitle;
+    margin-bottom: 10px;
+}
+
+.AddPhoto {
+    height: 260px;
+    width: 260px;
+    grid-area: AddPhoto;
+}
+
+.StudentAddForm {
+    grid-area: StudentAddForm;
+}
+
+.ParentDetail {
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "ParentDetailName ParentDetailName ParentDetailName"
+        "ParentDetailForm ParentDetailForm ParentDetailForm"
+        "ParentDetailForm ParentDetailForm ParentDetailForm";
+    grid-area: ParentDetail;
+}
+
+.ParentDetailName {
+    /* background-color: rgba(00, 15, 29, 0.1); */
+    margin-right: 33px;
+    grid-area: ParentDetailName;
+}
+
+.ParentDetailForm {
+
+
+    grid-area: ParentDetailForm;
+}
+
+.setSizeClassName .ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload-list.ant-upload-list-picture-card .ant-upload-list-item {
+    height: 260px;
+    width: 260px;
+    margin-left: -75px;
+}
+
+.setUploadSize .ant-upload-wrapper.ant-upload-picture-card-wrapper .ant-upload.ant-upload-select {
+    width: 260px;
+    height: 260px;
+    margin-inline-end: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    vertical-align: top;
+    background-color: rgba(00, 15, 29, 0.1);
+    border: 1px dashed #d9d9d9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}

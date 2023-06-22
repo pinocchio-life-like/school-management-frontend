@@ -1,0 +1,44 @@
+.CollectFeesPageCss {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.2fr 3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "CollectFeesTitle CollectFeesTitle CollectFeesTitle"
+        "ClassAndSectionSearch ClassAndSectionSearch SearchByKeyword"
+        "SearchedStudentsList SearchedStudentsList SearchedStudentsList";
+}
+
+.CollectFeesTitle {
+    grid-area: CollectFeesTitle;
+}
+
+.ClassAndSectionSearch {
+    grid-area: ClassAndSectionSearch;
+}
+
+.SearchByKeyword {
+    grid-area: SearchByKeyword;
+}
+
+.SearchedStudentsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.9fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "SearchedStudentsListTitle SearchedStudentsListTitle SearchedStudentsListTitle"
+        "SearchedStudentsListTable SearchedStudentsListTable SearchedStudentsListTable"
+        "SearchedStudentsListTable SearchedStudentsListTable SearchedStudentsListTable";
+    grid-area: SearchedStudentsList;
+}
+
+.SearchedStudentsListTitle {
+    grid-area: SearchedStudentsListTitle;
+}
+
+.SearchedStudentsListTable {
+    grid-area: SearchedStudentsListTable;
+}

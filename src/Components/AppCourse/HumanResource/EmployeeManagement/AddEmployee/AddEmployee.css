@@ -1,0 +1,4 @@
+.AddEmployeeContainer {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,45 @@
+.FullTableContainerCss {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 1.6fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "AssignTeacherTitle AssignTeacherTitle CourseListTitleAndSearchBar"
+        "FullTableCss FullTableCss FullTableCss"
+        "FullTableCss FullTableCss FullTableCss";
+}
+
+.AssignTeacherTitle {
+    /* background-color: rgba(69, 147, 255, 0.3); */
+    grid-area: AssignTeacherTitle;
+}
+
+.CourseListTitleAndSearchBar {
+    /* background-color: rgba(69, 147, 255, 0.3); */
+    grid-area: CourseListTitleAndSearchBar;
+}
+
+.FullTableCss {
+    grid-area: FullTableCss;
+}
+
+.OnAssignTeacherContainer {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 1.6fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr;
+    gap: 15px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "AssignTeacherTitle AssignTeacherTitle CourseListTitleAndSearchBar"
+        "AssignTeacherForm OnAssignTeacherTable OnAssignTeacherTable"
+        "AssignTeacherForm OnAssignTeacherTable OnAssignTeacherTable";
+}
+
+.AssignTeacherForm {
+    grid-area: AssignTeacherForm;
+}
+
+.OnAssignTeacherTable {
+    grid-area: OnAssignTeacherTable;
+}

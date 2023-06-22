@@ -1,0 +1,57 @@
+.AvailableJobsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "AvailableJobBoard AvailableJobBoard AvailableJobBoard"
+        "JobListings JobListings JobListings"
+        "JobListings JobListings JobListings";
+}
+
+.AvailableJobBoard {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.037, 1.27);
+    height: 25vh;
+    color: aliceblue;
+    background-size: 100% 110%;
+    background-image: url('/public/Images/career_banner.png');
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+    grid-area: AvailableJobBoard;
+    margin-bottom: 30px;
+}
+
+.JobPostTitle {
+    animation: upDown 5000ms infinite linear;
+}
+
+@keyframes upDown {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.JobListings {
+    grid-area: JobListings;
+    text-align: left;
+}

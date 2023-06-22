@@ -1,0 +1,349 @@
+.LandingPageHomeClass {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.IntroductionTextHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.IntroTextHeader {
+    color: rgb(255, 255, 255);
+    font-size: 56px;
+}
+
+.IntroTextSecondHeader {
+    color: white;
+}
+
+.IntroImageClass {
+    width: 100%;
+    height: 740px;
+}
+
+.BetterFuture {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.BetterFuture h1 {
+    font-weight: 800;
+    font-size: 42px;
+    color: rgba(40, 21, 136, 0.8);
+}
+
+.BetterFutureP {
+    margin-top: -15px;
+    background-color: rgba(188, 188, 255, 0.8);
+    padding: 0 10px;
+    border-radius: 20px;
+    color: rgba(40, 21, 136, 0.8);
+}
+
+.GetStartedFuture {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.maleStudentClass {
+    background-color: #070952b5;
+    height: 280px;
+    width: 280px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.FemaleStudentClass {
+    background-color: #FF6E31;
+    height: 280px;
+    width: 280px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MaleStudentIllustrationClass {
+    height: 330px;
+    width: 330px;
+    margin-bottom: 100px;
+}
+
+.FemaleStudentIllustrationClass {
+    height: 400px;
+    width: 400px;
+    margin-right: 20px;
+    margin-bottom: 120px;
+}
+
+.GetStartedExplanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.GetStartedButton {
+    background-color: rgba(40, 21, 136, 0.8);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.GetStartedP {
+    color: rgba(49, 49, 49, 0.936);
+}
+
+.StudentsCountOnGet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.StudentCounterOnGet {
+    font-weight: 800;
+    font-size: 38px;
+    color: rgba(49, 49, 49, 0.936);
+    margin-top: 30px;
+}
+
+.TeachersCountOnGet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.TeachersCounterOnGet {
+    width: 55%;
+    text-align: left;
+    font-weight: 800;
+    font-size: 38px;
+    color: rgba(49, 49, 49, 0.936);
+    margin-top: 30px;
+}
+
+.HomeProgramsContainer {
+    background-color: #070A52;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    padding: 10px 60px;
+    margin-top: 120px;
+    border-radius: 10px;
+}
+
+.HomeProgramsDescription {
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.HomeProgramsDescription:hover {
+    background-color: aliceblue;
+    color: #070A52;
+    /* Yellow color */
+}
+
+.HomeProgramsDescription:hover::before {
+    top: 10px;
+    left: 10px;
+}
+
+.HomeProgramsDescription:hover::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+.HomePageResources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.HomePageResources h1 {
+    font-weight: 800;
+    font-size: 42px;
+    color: rgba(40, 21, 136, 0.8);
+}
+
+.HomePageResources h4 {
+    color: rgba(40, 21, 136, 0.8);
+}
+
+.TeachingMethod {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 200px;
+}
+
+.TeachingMethod h2 {
+    color: rgba(40, 21, 136, 0.8);
+    font-size: 34px;
+}
+
+.HealthyKidDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070A52;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    margin-top: 120px;
+}
+
+.TeachingMethodList {
+    display: flex;
+    flex-direction: column;
+}
+
+.ListCheckOutLined {
+    background-color: #FF6E31;
+    color: white;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.AMotherAndAKid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.AMotherAndAKidPic {
+    width: 50%;
+    background-color: #FF6E31;
+    padding: 20px 20px 0px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+.AMotherAndAKidDesc {
+    color: aliceblue;
+    width: 50%;
+    background-color: #070A52;
+    padding: 20px 20px 0px 80px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.AMotherAndAKidDesc h2 {
+    font-size: 30px;
+}
+
+.TestimonialsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 0px 100px;
+}
+
+.TestimonialsHeader h2 {
+    color: #070A52;
+    font-size: 30px;
+}
+
+.SeeAllButton {
+    background-color: rgba(40, 21, 136, 0.8);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+}
+
+.TestimonialsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 0px 50px;
+}
+
+.TestimonialsCard {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    background-color: #070A52;
+    padding: 20px;
+    border-radius: 9px;
+    width: 24%;
+}
+
+.TestimoniaslCardName {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.TestimoniaslCardDescription {
+    margin-top: 10px;
+}
+
+.TestimoniaslCardDate {
+    margin-top: 15px;
+}
+
+.BetterFutureCLosing {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 50px 50px 50px
+}
+
+.GetStartedButtonEnd {
+    background-color: #FF6E31;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.ExpandabelDivClass {
+    display: flex;
+    align-items: center;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #208ded73;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
+}

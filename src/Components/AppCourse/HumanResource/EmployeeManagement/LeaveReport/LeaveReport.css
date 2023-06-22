@@ -1,0 +1,15 @@
+.LeaveRepportCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LeaveReportCardTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.LeaveReportCardNumber {
+    font-weight: 700;
+    font-size: 22px;
+}

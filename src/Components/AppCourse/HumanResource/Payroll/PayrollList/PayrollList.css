@@ -1,0 +1,15 @@
+.PayrollListContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.PayrollListHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.NewAndSearchPayroll {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}

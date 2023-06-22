@@ -1,0 +1,332 @@
+import { Button, Col, Form, Input, Row, Select, theme } from "antd";
+const { Option } = Select;
+
+const CourseSearchForm = (props) => {
+  //   console.log(props.courseList);
+  const { token } = theme.useToken();
+  const [form] = Form.useForm();
+  const formStyle = {
+    maxWidth: "none",
+    background: token.colorFillAlter,
+    borderRadius: token.borderRadiusLG,
+    padding: 24,
+  };
+  const onFinish = (values) => {
+    const grade = values.grade === "" ? undefined : values.grade;
+    const courseName = values.courseName === "" ? undefined : values.courseName;
+    const courseId = values.courseId === "" ? undefined : values.courseId;
+    console.log(values);
+    if (grade !== undefined) {
+      if (courseName !== undefined) {
+        if (courseId !== undefined) {
+          const courseList = props.courseList.filter((list) => {
+            return grade === list.grade &&
+              courseId === list.courseId &&
+              courseName === list.courseName
+              ? list
+              : "";
+          });
+          props.onFilterCourseList(courseList);
+        } else {
+          const courseList = props.courseList.filter((list) => {
+            return grade === list.grade && courseName === list.courseName
+              ? list
+              : "";
+          });
+          props.onFilterCourseList(courseList);
+        }
+      } else if (courseId !== undefined) {
+        const courseList = props.courseList.filter((list) => {
+          return grade === list.grade && courseId === list.courseId ? list : "";
+        });
+        props.onFilterCourseList(courseList);
+      } else {
+        const courseList = props.courseList.filter((list) => {
+          return grade === list.grade ? list : "";
+        });
+        props.onFilterCourseList(courseList);
+      }
+    } else if (courseName !== undefined) {
+      if (courseId !== undefined) {
+        const courseList = props.courseList.filter((list) => {
+          return courseId === list.courseId && courseName === list.courseName
+            ? list
+            : "";
+        });
+        props.onFilterCourseList(courseList);
+      } else {
+        const courseList = props.courseList.filter((list) => {
+          return courseName === list.courseName ? list : "";
+        });
+        props.onFilterCourseList(courseList);
+      }
+    } else if (courseId !== undefined) {
+      const courseList = props.courseList.filter((list) => {
+        return courseId === list.courseId ? list : "";
+      });
+      props.onFilterCourseList(courseList);
+    }
+  };
+  return (
+    <div style={{ marginBottom: 0 }}>
+      <Form
+        form={form}
+        name="advanced_search"
+        style={formStyle}
+        onFinish={onFinish}>
+        <Row gutter={24}>
+          <Col span={8} key={0}>
+            <Form.Item name="grade" style={{ textAlign: "left" }} hasFeedback>
+              <Select placeholder="Grade">
+                <Option value="Grade 1">Grade 1</Option>
+                <Option value="Grade 2">Grade 2</Option>
+                <Option value="Grade 3">Grade 3</Option>
+                <Option value="Grade 4">Grade 4</Option>
+                <Option value="Grade 5">Grade 5</Option>
+              </Select>
+            </Form.Item>
+          </Col>
+          <Col span={8} key={1}>
+            <Form.Item name="courseName">
+              <Input placeholder="Subject Name" />
+            </Form.Item>
+          </Col>
+          <Col span={8} key={2}>
+            <Form.Item name="courseId">
+              <Input placeholder="Subject Id" />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            span={24}
+            style={{
+              textAlign: "right",
+            }}>
+            <Button type="primary" htmlType="submit">
+              Search
+            </Button>
+            <Button
+              style={{
+                margin: "0 8px",
+              }}
+              onClick={() => {
+                form.resetFields();
+                props.onFilterCourseList(props.courseList);
+              }}>
+              Clear
+            </Button>
+          </Col>
+        </Row>
+      </Form>
+    </div>
+  );
+};
+
+export default CourseSearchForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//form save
+
+
+<Form
+          style={{ justifyContent: "right" }}
+          form={form}
+          name="horizontal_login"
+          layout="inline"
+          onFinish={onFinish}>
+          <Form.Item
+            style={{ minWidth: 200, textAlign: "left" }}
+            name="grade"
+            rules={[
+              {
+                required: true,
+                message: "Please select grade!",
+              },
+            ]}>
+            <Select placeholder="Select Grade">
+              <Option value="grade1">Grade 1</Option>
+              <Option value="grade2">Grade 2</Option>
+              <Option value="grade3">Grade 3</Option>
+              <Option value="grade4">Grade 4</Option>
+              <Option value="grade5">Grade 5</Option>
+            </Select>
+          </Form.Item>
+          <Form.Item
+            style={{ minWidth: 200 }}
+            name="courseName"
+            rules={[
+              {
+                required: true,
+                message: "Please input course name!",
+              },
+            ]}>
+            <Input type="text" placeholder="Course Name" />
+          </Form.Item>
+          <Form.Item
+            style={{ minWidth: 200 }}
+            name="courseId"
+            rules={[
+              {
+                required: true,
+                message: "Please input courseId!",
+              },
+            ]}>
+            <Input type="text" placeholder="Course Id" />
+          </Form.Item>
+
+          <div className="CourseSaveButton">
+            <Form.Item shouldUpdate>
+              {() => (
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  disabled={
+                    !form.isFieldsTouched(true) ||
+                    !!form
+                      .getFieldsError()
+                      .filter(({ errors }) => errors.length).length
+                  }>
+                  Save
+                </Button>
+              )}
+            </Form.Item>
+          </div>
+        </Form>
+
+
+
+
+
+//table
+
+
+<Table
+              size="small"
+              rowSelection={rowSelection}
+              columns={[
+                {
+                  title: "Course Id",
+                  dataIndex: "courseId",
+                  key: "courseId",
+                },
+                {
+                  title: "Course Name",
+                  dataIndex: "courseName",
+                  key: "courseName",
+                },
+                {
+                  title: "Grade",
+                  dataIndex: "grade",
+                  key: "grade",
+                },
+                {
+                  title: "Teacher",
+                  dataIndex: "Teacher",
+                  key: "teacher",
+                },
+                {
+                  title: "Action",
+                  key: "action",
+                  render: (text, record, index) => (
+                    <Space>
+                      <Form noStyle onFinish={onTeacherAssignFinish}>
+                        <Input.Group compact>
+                          {/* <Form.Item hasFeedback noStyle name="teacherName">
+                          <Select placeholder="Select Teacher">
+                            <Option value="Alemu">Alemu</Option>
+                            <Option value="Belu">Belu</Option>
+                            <Option value="Chala">Chala</Option>
+                          </Select>
+                        </Form.Item>
+                        <Form.Item hasFeedback noStyle name="section">
+                          <Select placeholder="Select Section">
+                            <Option value="A">A</Option>
+                            <Option value="B">B</Option>
+                            <Option value="C">C</Option>
+                          </Select>
+                        </Form.Item> */}
+                          <Form.Item noStyle>
+                            <Button
+                              style={{ marginBottom: 10 }}
+                              type="primary"
+                              htmlType="submit"
+                              action={record.action}
+                              onClick={(e) => console.log(record)}>
+                              Assign
+                            </Button>
+                          </Form.Item>
+                        </Input.Group>
+                      </Form>
+                      <Button
+                        style={{ marginBottom: 10 }}
+                        action={record.action}
+                        onClick={(e) => console.log(record)}>
+                        <EditFilled />
+                      </Button>
+                      <Button style={{ marginBottom: 10 }}>
+                        <CloseOutlined />
+                      </Button>
+                    </Space>
+                  ),
+                },
+              ]}
+              dataSource={courseListData}
+            />
+
+
+
+
+            //Search function on changes
+
+const onSearchFinish = (values) => {
+    let searchText = e.target.value;
+    let filtered = [];
+    if (searchText.length > 0) {
+      let courseName = filteredData.map((name) => {
+        return name.courseName;
+      });
+      for (let i = 0; i < courseName.length; i++) {
+        if (
+          searchText ===
+          courseName[i].substring(0, searchText.length).toLowerCase()
+        ) {
+          let singleFilter = originData.filter((filter) => {
+            return filter.courseName === courseName[i] ? filter : "";
+          });
+          filtered.push(...singleFilter);
+          setFilteredData(filtered);
+        }
+      }
+    } else if (searchText.length === 0) {
+      setFilteredData(originData);
+    }
+  };
+
+
+
+  //proposal
+  Hi there! I'm a highly motivated and skilled Graphic and Motion Designer with over 15 years experience.
+
+I believe in creating engaging and impactful design solutions that stay true to your brand and help take it to the next level.
+
+Specialising in:
+• Brand films
+• Animation
+• Video editing
+• 3D packaging
+• PowerPoint presentations
+
+I am extremely communicative and ensure projects are completed on schedule and to the highest standard. If you think I would be a good fit for your project I would love to hear from you!

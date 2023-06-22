@@ -1,0 +1,102 @@
+.AddFeeCss {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 0.7fr;
+    grid-template-rows: 0.1fr 0.5fr 2.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "StudentFeePageTitle StudentFeePageTitle BackAndBurgerTab"
+        "StudentInformationTable StudentInformationTable StudentInformationTable"
+        "FeeCollectionListTable FeeCollectionListTable FeeCollectionListTable";
+}
+
+.StudentFeePageTitle {
+    grid-area: StudentFeePageTitle;
+}
+
+.BackAndBurgerTab {
+    grid-area: BackAndBurgerTab;
+}
+
+.StudentInformationTable {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "TheStudentsPhoto StudentInformationDescription StudentInformationDescription"
+        "TheStudentsPhoto StudentInformationDescription StudentInformationDescription"
+        "TheStudentsPhoto StudentInformationDescription StudentInformationDescription";
+    grid-area: StudentInformationTable;
+}
+
+.TheStudentsPhoto {
+    border-left: 1px solid rgb(222, 222, 222);
+    border-top: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid rgb(222, 222, 222);
+    grid-area: TheStudentsPhoto;
+}
+
+.StudentInformationDescription {
+    margin-left: -65px;
+    border: 1px solid rgb(222, 222, 222);
+    border-left: 1px solid white;
+    grid-area: StudentInformationDescription;
+}
+
+.FeeCollectionListTable {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 1.4fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "CollectSelectedAndDate CollectSelectedAndDate CollectSelectedAndDate"
+        "FeeCollectionTable FeeCollectionTable FeeCollectionTable"
+        "FeeCollectionTable FeeCollectionTable FeeCollectionTable";
+    grid-area: FeeCollectionListTable;
+}
+
+.CollectSelectedAndDate {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "PrintAndCollectSelectedButton TodayDateShower TodayDateShower"
+        "PrintAndCollectSelectedButton TodayDateShower TodayDateShower"
+        "TableSelectReloadButton PrintAndLikeOptions PrintAndLikeOptions";
+    grid-area: CollectSelectedAndDate;
+}
+
+.PrintAndCollectSelectedButton {
+    grid-area: PrintAndCollectSelectedButton;
+}
+
+.TableSelectReloadButton {
+    margin-top: 26px;
+    grid-area: TableSelectReloadButton;
+}
+
+.TodayDateShower {
+    grid-area: TodayDateShower;
+}
+
+.PrintAndLikeOptions {
+    margin-top: 26px;
+    grid-area: PrintAndLikeOptions;
+}
+
+.FeeCollectionTable {
+    margin-top: 0px;
+    grid-area: FeeCollectionTable;
+}
+
+.ant-table .ant-table-container .ant-table-content table thead.ant-table-thead .ant-table-cell {
+    background-color: #4593ff;
+    color: white;
+}

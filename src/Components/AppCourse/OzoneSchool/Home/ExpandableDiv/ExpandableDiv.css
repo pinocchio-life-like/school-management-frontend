@@ -1,0 +1,34 @@
+.expandable {
+    transition: height 1s ease;
+}
+
+.expandable-header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 700;
+    text-align: "left";
+    letter-spacing: 1;
+    font-size: 24;
+}
+
+.expandable-header:hover {
+    transform: translateX(10px);
+    transition: transform 0.5s ease;
+}
+
+.expandable-content {
+    display: none;
+}
+
+.expandable-content.expanded {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-weight: 500;
+    color: "#5e7e8e";
+    letter-spacing: 1;
+    font-size: 17px;
+}
