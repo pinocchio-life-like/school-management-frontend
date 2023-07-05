@@ -305,14 +305,14 @@ const CourseGroup = () => {
                 marginBottom: 5,
                 marginTop: 27,
               }}>
-              <Search
+              {/* <Search
                 style={{ marginLeft: "30%" }}
                 placeholder="input search text"
-                //   onSearch={onSearch}
-                // onChange={onSearchChange}
-                // onChange=
+                  onSearch={onSearch}
+                onChange={onSearchChange}
+                onChange=
                 enterButton
-              />
+              /> */}
             </div>
           </div>
           {editing ? (

@@ -499,17 +499,18 @@ const TeacherList = () => {
               style={{
                 display: "flex",
                 textAlign: "left",
+                justifyContent: "right",
                 marginBottom: 5,
                 marginTop: 18,
               }}>
-              <Search
+              {/* <Search
                 style={{ marginLeft: "46.9%" }}
                 placeholder="input search text"
                 onSearch={onSearch}
                 onChange={onSearchChange}
-                // onChange=
-                // enterButton
-              />
+                onChange=
+                enterButton
+              /> */}
               <Button
                 onClick={() => {
                   navigate("/assignTeacher");

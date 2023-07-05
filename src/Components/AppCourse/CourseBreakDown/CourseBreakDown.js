@@ -304,17 +304,10 @@ const CourseBreakDown = () => {
             style={{
               display: "flex",
               textAlign: "left",
+              justifyContent: "right",
               marginBottom: 5,
               marginTop: 27,
             }}>
-            <Search
-              style={{ marginLeft: "30%" }}
-              placeholder="input search text"
-              onSearch={onSearch}
-              onChange={onSearchChange}
-              // onChange=
-              enterButton
-            />
             <Button
               onClick={() => {
                 navigate("/courseOffer");

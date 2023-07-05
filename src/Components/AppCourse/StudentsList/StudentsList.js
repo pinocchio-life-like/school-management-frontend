@@ -17,51 +17,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./StudentsList.css";
 const { Option } = Select;
 
-
-const EditableCell = ({
-  editing,
-  dataIndex,
-  title,
-  inputType,
-  record,
-  index,
-  children,
-  ...restProps
-}) => {
-  return (
-    <td {...restProps}>
-      {editing ? (
-        <Form.Item
-          name={dataIndex}
-          style={{
-            margin: 0,
-          }}
-          rules={[
-            {
-              required: true,
-              message: `Please Input ${title}!`,
-            },
-          ]}>
-          {dataIndex === "grade" ? (
-            <Select disabled placeholder="Cannot Edit">
-              <Option value="Grade 1">Grade 1</Option>
-              <Option value="Grade 2">Grade 2</Option>
-              <Option value="Grade 3">Grade 3</Option>
-            </Select>
-          ) : dataIndex === "status" ? (
-            <Input readOnly />
-          ) : dataIndex === "coursesId" ? (
-            <Select placeholder="Cannot Edit" disabled />
-          ) : (
-            <Input />
-          )}
-        </Form.Item>
-      ) : (
-        children
-      )}
-    </td>
-  );
-};
 const StudentsList = () => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
@@ -188,13 +143,13 @@ const StudentsList = () => {
         // console.log(record);
         return (
           <div>
-            <Image
+            {/* <Image
               style={{ borderRadius: 10, padding: 5 }}
               alt="hello"
               width={45}
               height={45}
               src={record.studentImage}
-            />
+            /> */}
             <span style={{ marginLeft: 10 }}>{record.studentName}</span>
           </div>
         );
@@ -257,31 +212,12 @@ const StudentsList = () => {
     //   Assignable: true,
     // },
     {
-      width: 120,
+      width: 80,
       title: "operation",
       dataIndex: "operation",
       render: (_, record) => {
-        const editable = isEditing(record);
-        return editable ? (
-          <span>
-            <Typography.Link
-              onClick={() => save(record.key)}
-              style={{
-                marginRight: 8,
-              }}>
-              Save
-            </Typography.Link>
-            <Popconfirm title="Sure to cancel?" onConfirm={cancel}>
-              <a>Cancel</a>
-            </Popconfirm>
-          </span>
-        ) : (
+        return (
           <Space size="middle">
-            <Typography.Link
-              disabled={editingKey !== ""}
-              onClick={() => edit(record)}>
-              Edit
-            </Typography.Link>
             <Popconfirm
               title="Sure want to delete?"
               onConfirm={() => {
@@ -295,27 +231,9 @@ const StudentsList = () => {
     },
   ];
   const hasSelected = selectedRowKeys.length > 0;
-  //merged columns
-  const mergedColumns = columns.map((col) => {
-    if (!col.editable) {
-      return col;
-    } else if (!col.Assignable) {
-      return col;
-    }
-    return {
-      ...col,
-      onCell: (record) => ({
-        record,
-        inputType: "text",
-        dataIndex: col.dataIndex,
-        title: col.title,
-        editing: isEditing(record),
-      }),
-    };
-  });
   if (xScroll === "fixed") {
-    mergedColumns[0].fixed = true;
-    mergedColumns[mergedColumns.length - 1].fixed = "right";
+    columns[0].fixed = true;
+    columns[columns.length - 1].fixed = "right";
   }
   const scroll = {};
   scroll.x = "100vw";
@@ -352,7 +270,7 @@ const StudentsList = () => {
               marginBottom: 5,
               marginTop: 8,
             }}>
-            <Search
+            {/* <Search
               style={{
                 // border: "1px solid blue",
                 // borderRadius: 8,
@@ -360,11 +278,11 @@ const StudentsList = () => {
                 marginRight: 5,
               }}
               placeholder="input search text"
-              // onSearch={onSearch}
-              // onChange={onSearchChange}
-              // onChange=
+              onSearch={onSearch}
+              onChange={onSearchChange}
+              onChange=
               enterButton
-            />
+            /> */}
           </div>
         </div>
         <div className="ActionsTab">
@@ -386,44 +304,15 @@ const StudentsList = () => {
             </Button>
           </div>
         </div>
-        <div className="ReloadAndSelectCount">
-          <div
-            style={{
-              display: "flex",
-              textAlign: "left",
-              marginBottom: 5,
-              marginTop: 20,
-            }}>
-            <Button
-              type="primary"
-              onClick={start}
-              disabled={!hasSelected}
-              loading={loading}>
-              Reload
-            </Button>
-            <span
-              style={{
-                marginLeft: 8,
-                marginTop: 6,
-              }}>
-              {hasSelected ? `Selected ${selectedRowKeys.length} items` : ""}
-            </span>
-          </div>
-        </div>
         <div className="StudentListTableContainer">
           <Form form={form} component={false}>
             <Table
               style={{ zIndex: -100 }}
               {...tableProps}
-              components={{
-                body: {
-                  cell: EditableCell,
-                },
-              }}
               bordered={false}
-              rowSelection={rowSelection}
+              // rowSelection={rowSelection}
               dataSource={tableData}
-              columns={mergedColumns}
+              columns={columns}
               rowClassName="editable-row"
               pagination={true}
             />

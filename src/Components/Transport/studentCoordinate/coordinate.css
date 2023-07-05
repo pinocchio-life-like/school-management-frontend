@@ -1,0 +1,6 @@
+.studentCoordinate {
+  border: 2px solid red;
+  margin: 10px;
+  overflow: hidden;
+  height: 700px;
+}

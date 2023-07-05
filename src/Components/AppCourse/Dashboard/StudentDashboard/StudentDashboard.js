@@ -93,6 +93,7 @@ const StudentDashboard = () => {
 
       const datta = origin.filter((data) => data.markId === userId);
       const grade = datta[0].grade;
+      const grady = datta[0].grade;
       let grader = datta[0].grade;
       grader = `${grader.slice(0, 1)}${grader.slice(-1)}`;
 
@@ -119,32 +120,73 @@ const StudentDashboard = () => {
 
       const data = [];
       for (let i = 0; i < responseData.teachers.length; i++) {
-        let coursesId = [];
-        for (let j = 0; j < responseData.teachers[i].coursesId.length; j++) {
-          for (
-            let k = 0;
-            k < responseData.teachers[i].coursesId[j].length;
-            k++
-          ) {
-            if (grader === responseData.teachers[i].coursesId[j][k].slice(-2)) {
-              coursesId.push(
-                <p style={{ margin: 0 }} key={Math.random()}>
-                  {responseData.teachers[i].coursesId[j][k].slice(0, 4)}
-                </p>
-              );
+        let checker = false;
+        let grade = [];
+        let normalGrade = [];
+        let insideCourse = [];
+        for (let k = 0; k < responseData.teachers[i].coursesId.length; k++) {
+          if (responseData.teachers[i].grade[k] === grady) {
+            const course = [];
+            for (let j = 0; j < CourseData.length; j++) {
+              for (
+                let l = 0;
+                l < responseData.teachers[i].coursesId[k].length;
+                l++
+              ) {
+                if (
+                  CourseData[j].grade === responseData.teachers[i].grade[k] &&
+                  CourseData[j].courseId ===
+                    responseData.teachers[i].coursesId[k][l]
+                ) {
+                  course.push(CourseData[j].courseName);
+                }
+              }
             }
+            insideCourse.push({
+              coursesId: responseData.teachers[i].coursesId[k],
+              grade: responseData.teachers[i].grade[k],
+              courseName: course,
+            });
+          } else {
+            checker = true;
           }
         }
-        data.push({
-          key: responseData.teachers[i].teacherId,
-          teacherName: responseData.teachers[i].teacherName,
-          courses: <>{coursesId}</>,
-          grade: grade,
-          competitionalLevel: responseData.teachers[i].competitionalLevel,
-        });
+        for (let j = 0; j < insideCourse.length; j++) {
+          if (insideCourse[j].grade === grady) {
+            const courseName = [];
+            const courseId = [];
+            for (let l = 0; l < insideCourse[j].courseName.length; l++) {
+              courseName.push(
+                <li key={Math.random()}>{insideCourse[j].courseName[l]}</li>
+              );
+              courseId.push(insideCourse[j].coursesId[l]);
+            }
+            if (insideCourse[j].grade === grady) {
+            }
+            grade.push(
+              <>
+                <ul>{courseName}</ul>
+              </>
+            );
+            normalGrade.push(insideCourse[j].grade);
+          }
+        }
+
+        if (responseData.teachers[i].status !== "Not Assigned" && !checker) {
+          data.push({
+            key: responseData.teachers[i].teacherId,
+            teacherName: responseData.teachers[i].teacherName,
+            grade: grady,
+            courses: grade,
+            competitionalLevel: responseData.teachers[i].competitionalLevel,
+            assignedTo: responseData.teachers[i].assignedTo,
+          });
+        }
       }
+
       setTeacherData([...data]);
     };
+
     getMarks();
   }, [userId]);
 

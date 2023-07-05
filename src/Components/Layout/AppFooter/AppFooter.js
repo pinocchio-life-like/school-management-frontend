@@ -15,7 +15,7 @@ const AppFooter = () => {
           textAlign: "center",
           width: "100%",
         }}>
-        SIRM ©2023 Created Eliyas Asefa
+        SIRM ©2023
       </Footer>
     </div>
   );

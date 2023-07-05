@@ -248,7 +248,7 @@ const CreateAccounts = () => {
                 <Select>
                   <Option value="HR Admin">HR Admin</Option>
                   <Option value="School Admin">School Admin</Option>
-                  <Option value="Inventory Admin">Inventory Admin</Option>
+                  {/* <Option value="Inventory Admin">Inventory Admin</Option> */}
                   <Option value="Transport Admin">Transport Admin</Option>
                 </Select>
               </Form.Item>

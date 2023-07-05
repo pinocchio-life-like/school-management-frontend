@@ -120,7 +120,7 @@ const PayrollReport = () => {
             </Title>
           </div>
           <div>
-            <div>
+            {/* <div>
               <Select
                 style={{
                   width: 220,
@@ -132,7 +132,7 @@ const PayrollReport = () => {
                 <Option value="Inventory Manager">Inventory Manager</Option>
                 <Option value="Driver">Driver</Option>
               </Select>
-            </div>
+            </div> */}
           </div>
         </div>
         <div>

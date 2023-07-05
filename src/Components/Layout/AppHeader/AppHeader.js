@@ -26,17 +26,17 @@ const AppHeader = (props) => {
         </Typography.Link>
       ),
     },
-    {
-      key: "2",
-      label: (
-        <Typography.Link
-          onClick={() => {
-            navigate("/inbox");
-          }}>
-          Inbox
-        </Typography.Link>
-      ),
-    },
+    // {
+    //   key: "2",
+    //   label: (
+    //     <Typography.Link
+    //       onClick={() => {
+    //         navigate("/inbox");
+    //       }}>
+    //       Inbox
+    //     </Typography.Link>
+    //   ),
+    // },
     {
       key: "3",
       label: <Typography.Link onClick={auth.logout}>Logout</Typography.Link>,

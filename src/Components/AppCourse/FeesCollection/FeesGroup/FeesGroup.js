@@ -200,27 +200,8 @@ const FeesGroup = () => {
       title: "operation",
       dataIndex: "operation",
       render: (_, record) => {
-        const editable = isEditing(record);
-        return editable ? (
-          <span>
-            <Typography.Link
-              onClick={() => save(record.key)}
-              style={{
-                marginRight: 8,
-              }}>
-              Save
-            </Typography.Link>
-            <Popconfirm title="Sure to cancel?" onConfirm={cancel}>
-              <a>Cancel</a>
-            </Popconfirm>
-          </span>
-        ) : (
+        return (
           <Space size="middle">
-            <Typography.Link
-              disabled={editingKey !== ""}
-              onClick={() => edit(record)}>
-              Edit
-            </Typography.Link>
             <Popconfirm
               title="Sure want to delete?"
               onConfirm={() => {
@@ -364,17 +345,17 @@ const FeesGroup = () => {
                 marginBottom: 5,
                 marginTop: 5,
               }}>
-              <Search
+              {/* <Search
                 style={{
                   marginLeft: "35.2%",
                   marginRight: 0,
                 }}
                 placeholder="input search text"
-                // onSearch={onSearch}
-                // onChange={onSearchChange}
-                // onChange=
+                onSearch={onSearch}
+                onChange={onSearchChange}
+                onChange=
                 enterButton
-              />
+              /> */}
             </div>
           </div>
           <div className="FeesGroupTable">

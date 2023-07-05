@@ -156,7 +156,7 @@ const CollectFees = () => {
         <div className="ClassAndSectionSearch">
           <Form form={form} onFinish={onFinish}>
             <div style={{ display: "flex", textAlign: "left" }}>
-              <Form.Item name="grade" style={{ width: "50%" }}>
+              <Form.Item name="grade" style={{ width: "60%" }}>
                 <Select placeholder="Select Grade">
                   <Option value="Grade 1">Grade 1</Option>
                   <Option value="Grade 2">Grade 2</Option>
@@ -170,14 +170,14 @@ const CollectFees = () => {
               </Form.Item>
               <Form.Item
                 name="section"
-                style={{ width: "50%", marginLeft: 10 }}>
+                style={{ width: "60%", marginLeft: 10 }}>
                 <Select placeholder="Select Section">
                   <Option value="A">A</Option>
                   <Option value="B">B</Option>
                   <Option value="C">C</Option>
                 </Select>
               </Form.Item>
-              <Form.Item style={{ marginLeft: 10 }}>
+              <Form.Item style={{ width: "10%", marginLeft: 10 }}>
                 <Button type="primary" htmlType="submit">
                   Search
                 </Button>
@@ -193,7 +193,7 @@ const CollectFees = () => {
               marginBottom: 5,
               marginTop: 0,
             }}>
-            <Search
+            {/* <Search
               style={{
                 marginLeft: "10%",
                 marginRight: 0,
@@ -202,10 +202,10 @@ const CollectFees = () => {
               onSearch={(value) => {
                 console.log(value);
               }}
-              // onChange={onSearchChange}
-              // onChange=
+              onChange={onSearchChange}
+              onChange=
               enterButton
-            />
+            /> */}
           </div>
         </div>
         <div className="SearchedStudentsList">

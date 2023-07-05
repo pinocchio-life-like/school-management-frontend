@@ -84,6 +84,11 @@ const Login = () => {
         navigate("/employeeList");
         return;
       }
+      if (responseData.userType === "Transport Admin") {
+        navigate("/vehicleList");
+        return;
+      }
+
       // navigate("/dashboard");
     } catch (err) {
       error("wrong Login Credentials");

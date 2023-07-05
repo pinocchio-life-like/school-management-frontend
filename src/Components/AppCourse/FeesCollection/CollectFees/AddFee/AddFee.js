@@ -62,6 +62,7 @@ const AddFee = () => {
   const [tableData, setTableData] = useState(originData);
   const payingStudent = localStorage.getItem("payingStudent");
   const [messageApi, contextHolder] = message.useMessage();
+  const [studentInfo, setStudentInfo] = useState([]);
 
   useEffect(() => {
     const getFees = async () => {
@@ -73,9 +74,7 @@ const AddFee = () => {
         const holder = data.studentsList.filter((stud) => {
           return stud.studentId === payingStudent;
         });
-
-        // let date = new Date(data.feeDueDate);
-        // date = date.toLocaleDateString("es-CL");
+        console.log("holder", holder);
 
         return {
           key: data.feeId,
@@ -394,8 +393,6 @@ const AddFee = () => {
       title: "Action",
       dataIndex: "operation",
       render: (_, record) => {
-        // const editable = isEditing(record);
-        // const Assignable = isAssigning(record);
         return (
           <Space size="middle">
             {record.status.props.children === "Not Paid" ? (
@@ -531,10 +528,10 @@ const AddFee = () => {
               Back
             </Link>
           </Typography.Link>
-          <Typography.Link style={{ fontSize: 15 }} onClick={showDrawer}>
+          {/* <Typography.Link style={{ fontSize: 15 }} onClick={showDrawer}>
             <MenuOutlined />
-          </Typography.Link>
-          <Drawer
+          </Typography.Link> */}
+          {/* <Drawer
             drawerStyle={{}}
             width={270}
             title="Class 2"
@@ -562,10 +559,10 @@ const AddFee = () => {
                 Section C List
               </Tabs.TabPane>
             </Tabs>
-          </Drawer>
+          </Drawer> */}
         </div>
-        <div className="StudentInformationTable">
-          <div className="TheStudentsPhoto">
+        {/* <div className="StudentInformationTable"> */}
+        {/* <div className="TheStudentsPhoto">
             <Image
               preview={false}
               style={{
@@ -580,8 +577,8 @@ const AddFee = () => {
               height={120}
               src="https://s3.amazonaws.com/media.thecrimson.com/photos/2014/11/07/202918_1301040.jpg"
             />
-          </div>
-          <div className="StudentInformationDescription">
+          </div> */}
+        {/* <div className="StudentInformationDescription">
             <Descriptions
               style={{
                 margin: 5,
@@ -609,11 +606,11 @@ const AddFee = () => {
               </Descriptions.Item>
               <Descriptions.Item label="Roll Number">0346</Descriptions.Item>
             </Descriptions>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <div className="FeeCollectionListTable">
           <div className="CollectSelectedAndDate">
-            <div
+            {/* <div
               className="PrintAndCollectSelectedButton"
               style={{ textAlign: "left" }}>
               <Button size="small" type="primary" style={{ marginRight: 5 }}>
@@ -633,12 +630,12 @@ const AddFee = () => {
                   marginTop: 6,
                   marginBottom: "10px",
                 }}></div>
-            </div>
+            </div> */}
             <div
               className="TodayDateShower"
-              style={{ textAlign: "right", color: "red" }}>
+              style={{ textAlign: "right", color: "red", marginTop: -30 }}>
               {todayDate}
-              <div
+              {/* <div
                 style={{
                   background: "#dadada",
                   height: "1px",
@@ -646,23 +643,23 @@ const AddFee = () => {
                   clear: "both",
                   marginTop: 11.5,
                   marginBottom: "10px",
-                }}></div>
+                }}></div> */}
             </div>
             <div className="TableSelectReloadButton">
-              <div
+              {/* <div
                 style={{
                   display: "flex",
                   textAlign: "left",
                   marginTop: -39,
-                }}>
-                <Button
+                }}> */}
+              {/* <Button
                   type="primary"
                   onClick={start}
                   disabled={!hasSelected}
                   loading={loading}>
                   Reload
-                </Button>
-                <span
+                </Button> */}
+              {/* <span
                   style={{
                     marginTop: 5,
                     marginLeft: 8,
@@ -670,20 +667,21 @@ const AddFee = () => {
                   {hasSelected
                     ? `Selected ${selectedRowKeys.length} items`
                     : ""}
-                </span>
-              </div>
+                </span> */}
+              {/* </div> */}
             </div>
-            <div
+            {/* <div
               className="PrintAndLikeOptions"
-              style={{ textAlign: "right", marginRight: 10, marginTop: -5 }}>
+              style={{ textAlign: "right", marginRight: 10, marginTop: -55 }}>
               <FilePdfOutlined />
-            </div>
+            </div> */}
           </div>
           <div className="FeeCollectionTable">
             <Form form={form} component={false}>
               <Table
+                style={{ marginTop: -80 }}
                 size="small"
-                rowSelection={rowSelection}
+                // rowSelection={rowSelection}
                 bordered
                 dataSource={tableData}
                 columns={columns}

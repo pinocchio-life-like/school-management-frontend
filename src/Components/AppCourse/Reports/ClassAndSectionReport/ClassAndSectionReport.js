@@ -188,16 +188,16 @@ const ClassAndSectionReport = () => {
         <Title style={{ marginTop: 0 }} level={4}>
           Class And Section Report
         </Title>
-        <div>
+        {/* <div>
           <Search
             enterButton
             placeholder="input search text"
-            // onSearch={onSearch}
+            onSearch={onSearch}
             style={{
               width: 230,
             }}
           />
-        </div>
+        </div> */}
       </div>
       <Table size="small" dataSource={tableData} columns={columns} />
       <Drawer

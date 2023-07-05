@@ -402,13 +402,6 @@ const CourseOffer = () => {
                 marginBottom: 5,
                 marginTop: 19,
               }}>
-              <Button
-                type="primary"
-                onClick={start}
-                disabled={!hasSelected}
-                loading={loading}>
-                Reload
-              </Button>
               <span
                 style={{
                   marginLeft: 8,

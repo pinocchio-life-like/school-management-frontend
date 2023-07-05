@@ -48,6 +48,11 @@ import Interviewing from "../AppCourse/HumanResource/Workforce/Interviewing/Inte
 import StudentDashboard from "../AppCourse/Dashboard/StudentDashboard/StudentDashboard";
 import AttendingTeacher from "../AppCourse/AttendingTeacher/AttendingTeacher";
 
+import VehicleList from "../Transport/Vehicle/VehicleList";
+import Direction from "../Transport/Route/Direction";
+import AssignVehicle from "../Transport/Vehicle/AssignVehicle";
+import AssignList from "../Transport/Vehicle/AssignList";
+import Maintenance from "../Transport/maintenance/Maintenance";
 const AppRoute = () => {
   const auth = useContext(AuthContext);
   const userType = auth.userType;
@@ -178,7 +183,6 @@ const AppRoute = () => {
         {userType === "HR Admin" && (
           <Route path="/payrollReport" element={<PayrollReport />} />
         )}
-
         {userType === "HR Admin" && (
           <Route path="/addEmployee" element={<AddEmployee />} />
         )}
@@ -200,11 +204,9 @@ const AppRoute = () => {
         {userType === "HR Admin" && (
           <Route path="/jobInterview" element={<Interviewing />} />
         )}
-
         {userType === "Student" && (
           <Route path="/studentDashboard" element={<StudentDashboard />} />
         )}
-
         {userType === "Teacher" && (
           <Route path="/studentsMark" element={<StudentMark />} />
         )}
@@ -212,6 +214,20 @@ const AppRoute = () => {
           <Route path="/studentsAttendance" element={<StudentsAttendance />} />
         )}
 
+        {/* //transport routes */}
+
+        {userType === "Transport Admin" && (
+          <Route path="/assignVehicle" element={<AssignVehicle />} />
+        )}
+        {userType === "Transport Admin" && (
+          <Route path="/vehicleList" element={<VehicleList />} />
+        )}
+        {userType === "Transport Admin" && (
+          <Route path="/direction" element={<Direction />} />
+        )}
+        {/* {userType === "Teacher" && ( )} */}
+        {/* <Route path="/assignVehicle2" element={<AssignVehicle />} /> */}
+        {/* <Route path="/maintenance" element={<Maintenance />} /> */}
         <Route path="/*" element={<NotFoundPage signedin={true} />} />
       </Routes>
     </div>

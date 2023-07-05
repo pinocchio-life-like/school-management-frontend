@@ -20,6 +20,7 @@ const AttendingTeacher = () => {
   const [addForm] = Form.useForm();
   const [tableData, setTableData] = useState(originData);
   const [options, setOptions] = useState([]);
+  const [updated, setUpdated] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const AttendingTeacher = () => {
       setTableData([...originData]);
     };
     getAttenders();
-  }, []);
+  }, [updated]);
   const onFinish = async (values) => {
     const { grade, teacherId } = values;
     const data = teacherData.find((teacher) => teacher.teacherId === teacherId);
@@ -67,6 +68,7 @@ const AttendingTeacher = () => {
         throw new Error("error");
       }
       success("Attender Successfully Added");
+      setUpdated((prev) => !prev);
     } catch (error) {}
   };
 

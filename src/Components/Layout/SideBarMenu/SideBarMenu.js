@@ -117,6 +117,12 @@ const SideBarMenu = (props) => {
         <SnippetsOutlined />
       ),
     ];
+  } else if (userType === "Transport Admin") {
+    items = [
+      getItem("Vehicle List", "/vehicleList", <AppstoreOutlined />),
+      getItem("Direction", "/direction", <UserOutlined />),
+      getItem("Assign Vehicle", "/assignVehicle", <UserOutlined />),
+    ];
   }
 
   const handleOpenChange = (keys) => {

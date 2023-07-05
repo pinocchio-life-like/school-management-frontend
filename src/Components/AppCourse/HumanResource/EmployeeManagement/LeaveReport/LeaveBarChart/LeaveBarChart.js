@@ -118,6 +118,7 @@ function LeaveBarChart(props) {
       }
     }
   }
+  console.log(data);
 
   return (
     <BarChart
